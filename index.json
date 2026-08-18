@@ -1,0 +1,28 @@
+{
+  "author": "brioslabs",
+  "repository": "https://github.com/brioslabs/agent-skills-hub",
+  "updated_at": "2026-08-17T00:00:00Z",
+  "skills": [
+    {
+      "name": "python-backend-expert",
+      "description": "Guía y buenas prácticas para construir APIs robustas y escalables con Python y FastAPI.",
+      "version": "1.0.0",
+      "path": "skills/python-backend-expert/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/python-backend-expert/SKILL.md"
+    },
+    {
+      "name": "frontend-expert",
+      "description": "Guía avanzada para diseño y desarrollo de interfaces web modernas y atractivas.",
+      "version": "1.0.0",
+      "path": "skills/frontend-expert/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/frontend-expert/SKILL.md"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Crea nuevas skills para agentes siguiendo la especificación oficial de Agent Skills.",
+      "version": "1.0.0",
+      "path": "skills/skill-creator/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/skill-creator/SKILL.md"
+    }
+  ]
+}

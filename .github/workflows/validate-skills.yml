@@ -1,0 +1,44 @@
+name: Validate Skills Syntax
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate SKILL.md Frontmatter
+        run: |
+          python -c "
+          import glob, sys, re
+
+          skills = glob.glob('skills/*/SKILL.md')
+          if not skills:
+              print('⚠️ No skills found!')
+              sys.exit(1)
+
+          errors = 0
+          for skill_path in skills:
+              with open(skill_path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              
+              if not content.startswith('---'):
+                  print(f'❌ Error en {skill_path}: Falta encabezado YAML ---')
+                  errors += 1
+                  continue
+              
+              print(f'✅ Validado: {skill_path}')
+
+          if errors > 0:
+              sys.exit(1)
+          "

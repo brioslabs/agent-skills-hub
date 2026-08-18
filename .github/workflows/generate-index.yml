@@ -1,0 +1,60 @@
+name: Autogenerate Skills Index
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'skills/**'
+
+jobs:
+  generate-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build index.json
+        run: |
+          python -c "
+          import json, glob, re, datetime
+
+          skills = []
+          for path in sorted(glob.glob('skills/*/SKILL.md')):
+              name = path.split('/')[1]
+              with open(path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              
+              # Extract description if available
+              desc_match = re.search(r'description:\s*>\s*(.*?)(?=\n[a-z\-]+:|\n---)', content, re.DOTALL)
+              desc = desc_match.group(1).strip().replace('\n', ' ') if desc_match else ''
+              
+              skills.append({
+                  'name': name,
+                  'description': desc,
+                  'version': '1.0.0',
+                  'path': path,
+                  'raw_url': f'https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/{path}'
+              })
+
+          index_data = {
+              'author': 'brioslabs',
+              'repository': 'https://github.com/brioslabs/agent-skills-hub',
+              'updated_at': datetime.datetime.utcnow().isoformat() + 'Z',
+              'skills': skills
+          }
+
+          with open('index.json', 'w', encoding='utf-8') as f:
+              json.dump(index_data, f, indent=2, ensure_ascii=False)
+          "
+
+      - name: Commit and Push Index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git commit -m "chore: autogenerate index.json [skip ci]" || exit 0
+          git push
