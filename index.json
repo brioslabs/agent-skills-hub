@@ -23,6 +23,13 @@
       "version": "1.0.0",
       "path": "skills/skill-creator/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/skill-creator/SKILL.md"
+    },
+    {
+      "name": "docs-expert",
+      "description": "Expert in agile, precise, and strategic software project documentation. Covers READMEs, architecture docs, API/data-model docs, code conventions, Architecture Decision Records (ADRs), functional specifications, business rules, and stakeholder-facing decision documents. Keeps documentation lightweight and living (updated alongside the code, never a stale one-off), and enforces a strict separation between TECHNICAL documentation and BUSINESS/FUNCTIONAL documentation so each audience gets exactly what it needs without duplication.",
+      "version": "1.0.0",
+      "path": "skills/docs-expert/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/docs-expert/SKILL.md"
     }
   ]
 }
