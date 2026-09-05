@@ -1,35 +1,42 @@
 {
   "author": "brioslabs",
   "repository": "https://github.com/brioslabs/agent-skills-hub",
-  "updated_at": "2026-08-17T00:00:00Z",
+  "updated_at": "2026-09-05T05:02:08.045309Z",
   "skills": [
     {
-      "name": "python-backend-expert",
-      "description": "Guía y buenas prácticas para construir APIs robustas y escalables con Python y FastAPI.",
+      "name": "docs-expert",
+      "description": "Expert in agile, precise, and strategic software project documentation. Covers READMEs,   architecture docs, API/data-model docs, code conventions, Architecture Decision Records (ADRs),   functional specifications, business rules, and stakeholder-facing decision documents. Keeps   documentation lightweight and living (updated alongside the code, never a stale one-off), and   enforces a strict separation between TECHNICAL documentation and BUSINESS/FUNCTIONAL documentation   so each audience gets exactly what it needs without duplication.   Trigger: When the user says \"documenta\", \"documentación\", \"escribe un ADR\", \"documento de decisión\",   \"readme\", \"especificación funcional\", \"reglas de negocio\", \"documento técnico\", \"documenta la   arquitectura\", \"documenta la api\", \"actualiza la documentación\", \"document this\", \"write a README\",   \"write an ADR\", \"architecture decision record\", \"functional spec\", \"business rules doc\",   \"decision document\", \"document the architecture\", \"document the API\", \"update the docs\", or any   variant expressing intent to create or maintain documentation for a software project.",
       "version": "1.0.0",
-      "path": "skills/python-backend-expert/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/python-backend-expert/SKILL.md"
+      "path": "skills/docs-expert/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/docs-expert/SKILL.md"
     },
     {
       "name": "frontend-expert",
-      "description": "Guía avanzada para diseño y desarrollo de interfaces web modernas y atractivas.",
+      "description": "Expert guidance for creating distinctive, production-grade frontend interfaces with modern CSS, HTML5, dynamic micro-animations, and clean JavaScript.   Trigger: When user asks to design, build, or polish UI/UX, components, or web applications.",
       "version": "1.0.0",
       "path": "skills/frontend-expert/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/frontend-expert/SKILL.md"
     },
     {
+      "name": "gh-manager",
+      "description": "Expert GitHub and Git workflow management. Use this skill to sync changes (push/pull), manage branches, handle commits with conventional standards, and interact with GitHub CLI for PRs and issues.   Trigger: When managing GitHub/Git workflows, branches, commits, PRs, issues, or repo governance.",
+      "version": "1.0.0",
+      "path": "skills/gh-manager/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/gh-manager/SKILL.md"
+    },
+    {
+      "name": "python-backend-expert",
+      "description": "Expert guidance for building secure, scalable, and maintainable Python backends using FastAPI, AsyncSQLAlchemy, and Pydantic V2.   Trigger: When creating, refactoring, or optimizing Python backend architectures, APIs, or database interactions.",
+      "version": "1.0.0",
+      "path": "skills/python-backend-expert/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/python-backend-expert/SKILL.md"
+    },
+    {
       "name": "skill-creator",
-      "description": "Crea nuevas skills para agentes siguiendo la especificación oficial de Agent Skills.",
+      "description": "Creates new AI agent skills following the Agent Skills specification for brioslabs repositories.   Trigger: When user asks to create a new skill, add agent instructions, or document patterns for AI.",
       "version": "1.0.0",
       "path": "skills/skill-creator/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/skill-creator/SKILL.md"
-    },
-    {
-      "name": "docs-expert",
-      "description": "Expert in agile, precise, and strategic software project documentation. Covers READMEs, architecture docs, API/data-model docs, code conventions, Architecture Decision Records (ADRs), functional specifications, business rules, and stakeholder-facing decision documents. Keeps documentation lightweight and living (updated alongside the code, never a stale one-off), and enforces a strict separation between TECHNICAL documentation and BUSINESS/FUNCTIONAL documentation so each audience gets exactly what it needs without duplication.",
-      "version": "1.0.0",
-      "path": "skills/docs-expert/SKILL.md",
-      "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/docs-expert/SKILL.md"
     }
   ]
 }
