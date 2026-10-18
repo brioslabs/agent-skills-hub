@@ -1,7 +1,7 @@
 {
   "author": "brioslabs",
   "repository": "https://github.com/brioslabs/agent-skills-hub",
-  "updated_at": "2026-09-05T05:02:08.045309Z",
+  "updated_at": "2026-10-18T04:25:06.466397Z",
   "skills": [
     {
       "name": "docs-expert",
@@ -23,6 +23,13 @@
       "version": "1.0.0",
       "path": "skills/gh-manager/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/gh-manager/SKILL.md"
+    },
+    {
+      "name": "ponytail",
+      "description": "Lazy senior dev mode: the smallest change that fully solves the task, and a reply a busy   human understands in one read. Applies to any coding task (writing, fixing, refactoring,   reviewing, choosing dependencies). Levels: lite, full (default), ultra.   Trigger: When the user says \"ponytail\", \"modo perezoso\", \"modo vago\", \"mínimo código\",   \"el cambio más chico\", \"solución más simple\", \"sin sobreingeniería\", \"lazy mode\", \"be lazy\",   \"smallest change\", \"simplest solution\", \"minimal diff\", \"yagni\", or complains about   over-engineering or bloat.",
+      "version": "1.0.0",
+      "path": "skills/ponytail/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/brioslabs/agent-skills-hub/main/skills/ponytail/SKILL.md"
     },
     {
       "name": "python-backend-expert",
